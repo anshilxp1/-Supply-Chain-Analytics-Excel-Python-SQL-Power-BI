@@ -156,7 +156,3 @@ Avg Order Value = DIVIDE([Total Sales], [Total Orders], 0)
 
 **Anshil Gautam** — B.Tech CSE | Data Analytics  
 
-
----
-
-## Folder Structure
