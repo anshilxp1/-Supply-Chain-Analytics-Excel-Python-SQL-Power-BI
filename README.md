@@ -86,15 +86,14 @@ Total Orders = DISTINCTCOUNT(orders[Order Id])
 
 Total Profit = SUM(orders[Benefit per order])
 
-Profit Margin % = DIVIDE([Total Profit], [Total Sales], 0)
+profit Margin = (sum('supply_data orders'[Benefit per order])/sum('supply_data orders'[Total Sales]))*100
 
-On-Time Delivery Rate = 
-DIVIDE(
-    CALCULATE(DISTINCTCOUNT(shipping[Order Id]), shipping[Delivery Status] = "Shipping on time"),
-    DISTINCTCOUNT(shipping[Order Id]), 0
+
+on time % delivery = (CALCULATE(countrows('supply_data shipping'),'supply_data shipping'[Delivery
+Status]="Shipping on time")/COUNTROWS('supply_data orders'))*100
 )
 
-Late Delivery Rate = DIVIDE(SUM(shipping[Late_delivery_risk]), COUNTROWS(shipping), 0)
+Late Deliery Risk (in%) = (sum('supply_data shipping'[Late_delivery_risk])/countrows('supply_data shipping'))*100
 
 Avg Discount % = AVERAGE(orders[Order Item Discount Rate]) * 100
 
