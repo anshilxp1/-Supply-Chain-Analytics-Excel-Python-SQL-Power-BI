@@ -138,8 +138,8 @@ Avg Order Value = DIVIDE([Total Sales], [Total Orders], 0)
 
 ```text
 └── Supply-Chain-Analytics-Excel-Python-SQL-Power-BI/
-    ├── Dashboard/                # Interactive Power BI / Tableau dashboard files
-    ├── Excel_work/               # Cleaned data, pivot tables, and Excel analysis
+    ├── Dashboard/                # Interactive Power BI 
+    ├── Excel_work/               # Cleaned data and Excel analysis
     ├── Python_work/              # Jupyter Notebooks for EDA and data preprocessing
     ├── Report/                   # Documentation and executive summary reports
     ├── SQL_work/                 # SQL scripts for database creation and queries
